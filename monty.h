@@ -38,9 +38,16 @@ typedef struct instruction_s
 
 extern stack_t *head;
 
-/*stack.func.c
+/*function to get opcode type*/
+void (*get_opcode(char *s))(stack_t **stack, unsigned int line_no);
+
+    /*stk_opecode functions*/
+void stk_push(stack_t **stack, unsigned int line_number);
+void stk_pall(stack_t **stack, unsigned int line_number);
+
+/*stack.func.c*/
 stack_t add_to_stack(stack_t **head, int data);
-int print_stack(stack_t **head);*/
+void print_stack(stack_t **head);
 
 /*helpers*/
 int countline(char *text, int *count);

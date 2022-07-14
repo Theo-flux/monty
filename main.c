@@ -6,7 +6,8 @@
  * @argv: argument array
  * Return: 1 is successfull and 0  if failed
  */
-int main(int argc, char *argv[])
+
+int main (int argc, char *argv[])
 {
 	if (argc > 2 || argc < 2)
 	{
@@ -36,7 +37,8 @@ int main(int argc, char *argv[])
 				/*fgets(text, sizeof(text), fp);*/
 				printf("%s\n", text);
 				lineNo += countline(text, &lineNo);
-				printf("Line no: %d\n", lineNo);
+				
+				/*printf("Line no: %d\n", lineNo);*/
 			}
 			printf("%d\n", lineNo);
 		}
